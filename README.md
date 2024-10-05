@@ -66,7 +66,9 @@ API Endpoints
 
 `{ "error": "Error message" }`
 
-`GET /BStoAD/2080/1/1 HTTP/1.1`  
+REQUEST
+--------------
+`GET https://sudhang.pythonanywhere.com/BStoAD/2080/1/1 HTTP/1.1`  
 `Host: sudhang.pythonanywhere.com`
 
 #### Successful Response:
@@ -99,7 +101,9 @@ API Endpoints
 
 `{ "error": "Error message" }`
 
-`GET /ADtoBS/2023/1/15 HTTP/1.1`  
+REQUEST
+--------------
+`GET https://sudhang.pythonanywhere.com/ADtoBS/2023/1/15 HTTP/1.1`  
 `Host: sudhang.pythonanywhere.com`
 
 #### Successful Response:
@@ -134,5 +138,3 @@ Notes
 -----
 
 Handle potential exceptions in client-side code to manage errors gracefully.
-
-function convertBSToAD() { const url = \`https://sudhang.pythonanywhere.com//BStoAD/2005/05/11\`; fetch(url, { method: 'GET' }) .then(response => response.json()) .then(data => { document.getElementById('bs-to-ad-content').textContent = JSON.stringify(data, null, 4); document.getElementById('bs-to-ad-response').style.display = 'block'; }) .catch(error => { document.getElementById('bs-to-ad-content').textContent = 'Error: ' + error; document.getElementById('bs-to-ad-response').style.display = 'block'; }); } // Function to convert AD to BS with the fixed date 2005/05/11 function convertADToBS() { const url = \`https://sudhang.pythonanywhere.com//ADtoBS/2005/05/11\`; fetch(url, { method: 'GET' }) .then(response => response.json()) .then(data => { document.getElementById('ad-to-bs-content').textContent = JSON.stringify(data, null, 4); document.getElementById('ad-to-bs-response').style.display = 'block'; }) .catch(error => { document.getElementById('ad-to-bs-content').textContent = 'Error: ' + error; document.getElementById('ad-to-bs-response').style.display = 'block'; }); }
